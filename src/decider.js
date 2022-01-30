@@ -1,5 +1,6 @@
 export const Result = {
-    p1Wins: "p1Wins"
+    p1Wins: "p1Wins",
+    p2Wins: "p2Wins"
 }
 
 export const Throws = {
@@ -8,7 +9,10 @@ export const Throws = {
 }
 
 export default class Requests {
-    play = () => {
-        return Result.p1Wins
-    }
+    play = (p1) => {
+        if (p1 === Throws.rock) {
+            return Result.p1Wins
+        }
+        return Result.p2Wins
+    }    
 }
