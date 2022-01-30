@@ -36,4 +36,14 @@ describe("rps", () => {
         const result = new Requests().play(Throws.rock, Throws.rock)
         expect(result).toBe(Result.tie)
     })
+
+    it("paper vs paper", () => {
+        const result = new Requests().play(Throws.paper, Throws.paper)
+        expect(result).toBe(Result.tie)
+    })
+
+    it("scissors vs scissors", () => {
+        const result = new Requests().play(Throws.scissors, Throws.scissors)
+        expect(result).toBe(Result.tie)
+    })
 })
