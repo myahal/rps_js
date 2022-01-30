@@ -1,7 +1,8 @@
 export const Result = {
     p1Wins: "p1Wins",
     p2Wins: "p2Wins",
-    tie: "tie"
+    tie: "tie",
+    invalidInput: "invalidInput"
 }
 
 export const Throws = {
@@ -10,8 +11,13 @@ export const Throws = {
     paper: "paper"
 }
 
+const ThrowPattern = [Throws.rock, Throws.scissors, Throws.paper]
 export default class Requests {
     play = (p1, p2) => {
+        if (!(ThrowPattern.includes(p1) && ThrowPattern.includes(p2))) {
+            return Result.invalidInput
+        }
+        
         if (p1 === p2) {
             return Result.tie
         } else if (p1 === Throws.rock && p2 === Throws.scissors || 
