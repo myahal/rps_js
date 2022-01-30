@@ -9,8 +9,8 @@ export const Throws = {
 }
 
 export default class Requests {
-    play = (p1) => {
-        if (p1 === Throws.rock) {
+    play = (p1, p2) => {
+        if (p1 === Throws.rock || p2 === Throws.paper) {
             return Result.p1Wins
         }
         return Result.p2Wins

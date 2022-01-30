@@ -10,5 +10,10 @@ describe("rps", () => {
     it("scissors vs rock", () => {
         const result = new Requests().play(Throws.scissors, Throws.rock)
         expect(result).toBe(Result.p2Wins)
-  })
+    })
+
+    it("scissors vs paper", () => {
+        const result = new Requests().play(Throws.scissors, Throws.paper)
+        expect(result).toBe(Result.p1Wins)
+    })
 })
