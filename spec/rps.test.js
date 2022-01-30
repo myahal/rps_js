@@ -31,4 +31,9 @@ describe("rps", () => {
         const result = new Requests().play(Throws.rock, Throws.paper)
         expect(result).toBe(Result.p2Wins)
     })
+
+    it("rock vs rock", () => {
+        const result = new Requests().play(Throws.rock, Throws.rock)
+        expect(result).toBe(Result.tie)
+    })
 })
