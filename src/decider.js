@@ -5,12 +5,13 @@ export const Result = {
 
 export const Throws = {
     rock: "rock",
-    scissors: "scissors"
+    scissors: "scissors",
+    paper: "paper"
 }
 
 export default class Requests {
     play = (p1, p2) => {
-        if (p1 === Throws.rock || p2 === Throws.paper) {
+        if (p1 === Throws.rock || p2 === Throws.paper || p1 === Throws.paper && p2 === Throws.rock) {
             return Result.p1Wins
         }
         return Result.p2Wins
